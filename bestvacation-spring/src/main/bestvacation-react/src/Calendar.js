@@ -17,7 +17,7 @@ function Calendar(props) {
     }, []);
     return (
         // 캘린더 컴포넌트 구현 내용 작성
-        <DatePicker selected={selectedDate} onChange={handleChange} />
+        <DatePicker dateFormat="yymmdd" selected={selectedDate} onChange={handleChange} />
     );
 }
 
