@@ -1,3 +1,4 @@
+-- 데이터베이스 생성
 CREATE DATABASE bestvacation_db;
 SHOW  databases;
 USE bestvacation_db;
@@ -36,5 +37,6 @@ CREATE TABLE calendar (
     PRIMARY KEY(c_key)
 ) ENGINE=InnoDB CHARSET=utf8mb4;
 
+-- 생성된 테이블 컬럼 조회
 SHOW columns FROM member;
 SHOW columns FROM calendar;
