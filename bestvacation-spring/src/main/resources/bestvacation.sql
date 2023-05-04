@@ -28,3 +28,20 @@ CREATE TABLE calender(
 	c_sys_user	VARCHAR(255)	null,
 	primary key(c_key)
 )ENGINE=MYISAM CHARSET=utf8;
+
+
+-- user 생성문
+create user 'vacation'@'localhost' identified by 'best';
+grant all privileges on bestvacation_db.* to 'vacation'@'localhost';
+
+-- 테스트용 데이터 생성문 (캘린더)
+insert into bestvacation_db.calender
+(c_ymd, m_key) values ('20230504', 0);
+
+-- 테스트용 데이터 생성문 (멤버)
+insert into bestvacation_db.`member` 
+(m_id, m_password, m_join_ymd, m_sign_up_ymd, m_name,
+m_used_vac_cnt, m_year_vac_cnt, m_total_vac_cnt)
+value 
+('test1', 'test1', '20220801', '20230504', '테스트용',
+0, 0, 0);
